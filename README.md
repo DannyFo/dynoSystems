@@ -2,7 +2,8 @@
 
 ## Test Task QA inter (PLA) 
   
- ####First task:
+ *First task:*
+ 
  Let imagine that we have system that holds and manages contact directory of many companies. 
  There is one of HTTP endpoints that responsible for retrieving user data by name: 
  GET http://some_domain.com:8080/company/%companyId%/users?name=%someName% 
@@ -28,7 +29,8 @@
   of existing employee (but moved into another company f. ex. 888) and 777 is ID 
   of exists company, check that returned HTTP status code 301
   
-  ####Second task:
+  *Second task:*
+  
   Implement following scenario for this endpoint using Java language and one of 
   the test frameworks, for example TestNG, Junit, etc...: Verify that user can 
   search only member of his own company.
