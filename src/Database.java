@@ -9,9 +9,9 @@ public class Database {
     }
 
     public Employee get(String nameToGet, String employeeName) {
-        if (mapBase.get(nameToGet).getCompany().equals(mapBase.get(employeeName).getCompany())){
+        if (mapBase.get(nameToGet).getCompany().equals(mapBase.get(employeeName).getCompany())) {
             return mapBase.get(nameToGet);
         }
-    throw new RuntimeException("Forbidden");
+        throw new RuntimeException("Forbidden");
     }
 }

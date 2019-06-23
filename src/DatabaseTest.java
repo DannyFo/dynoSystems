@@ -4,10 +4,10 @@ import org.junit.Test;
 
 
 public class DatabaseTest {
-private Database database = new Database();
-private Employee requestedEmployee1 = new Employee("Franklin", "OST");
-private Employee requestedEmployee2 = new Employee("Ocean", "BJC");
-private Employee requestingEmployee = new Employee("Mandela", "OST");
+    private Database database = new Database();
+    private Employee requestedEmployee1 = new Employee("Franklin", "OST");
+    private Employee requestedEmployee2 = new Employee("Ocean", "BJC");
+    private Employee requestingEmployee = new Employee("Mandela", "OST");
 
     @Before
     public void setUp() {
@@ -15,14 +15,16 @@ private Employee requestingEmployee = new Employee("Mandela", "OST");
         database.save(requestedEmployee2);
         database.save(requestingEmployee);
     }
+
     @Test
     public void get() {
-        Employee e1 = database.get("Franklin","Mandela");
-        Assert.assertEquals(e1,requestedEmployee1);
+        Employee e1 = database.get("Franklin", "Mandela");
+        Assert.assertEquals(e1, requestedEmployee1);
     }
+
     @Test(expected = Exception.class)
     public void get1() {
-        database.get("Ocean","Mandela");
+        database.get("Ocean", "Mandela");
     }
 
 }
